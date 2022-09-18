@@ -15,6 +15,8 @@ const deps = [_]fetch.Dependency{
     },
 };
 
+pub const magic_number = 1234;
+
 pub fn build(builder: *std.build.Builder) !void {
     try fetch.fetchAndBuild(builder, "zig-deps", &deps, "compile.zig");
 }
